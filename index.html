@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horrany | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="particulas"></div>
+
+  <!-- NAVEGAÇÃO -->
+  <nav class="navegacao">
+    <ul class="menu">
+      <li><a href="#inicio" class="menu-link">Início</a></li>
+      <li><a href="#sobre" class="menu-link">Sobre</a></li>
+      <li><a href="#projetos" class="menu-link">Áreas de Atuação</a></li>
+      <li><a href="#contato" class="menu-link">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- CABEÇALHO -->
+  <main id="inicio" class="cabecalho">
+    <div class="foto-perfil">
+      <img src="img/DSC04415.jpg" alt="Foto de Horrany Gomes">
+    </div>
+
+    <h1>Horrany Gomes</h1>
+    <p class="cabecalho-sub-titulo">Design & Audiovisual</p>
+  </main>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Sobre mim</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        Sou estudante de Design Gráfico, apaixonada por Arte, Música, Cultura, Fotografia, Audiovisual e Tecnologia. Gosto de explorar diferentes áreas do design, incluindo experiências digitais e interfaces, mas meu trabalho vai muito além das telas. Cada projeto que crio, seja ele de qual área for, carrega um pouco do meu olhar sobre o mundo, misturando cores, sons e imagens que refletem quem eu sou. Neste site, que por sinal eu mesma desenvolvi, você vai encontrar ideias, experimentos e criações que carregam minha essência. Aqui compartilho não só o que faço, mas também o que me inspira, convidando você a conhecer o meu universo criativo.
+      </p>
+    </div>
+  </section>
+
+  <!-- ÁREAS DE ATUAÇÃO -->
+  <section id="projetos" class="projetos">
+    <h2 class="projetos-titulo">Áreas de Atuação</h2>
+    <p>Clique nos cards para ver meus projetos</p>
+
+    <div class="projetos-caixa">
+
+      <!-- CARD DESIGN GRÁFICO -->
+      <a href="design-grafico.html" class="card-link" target="_blank">
+        <div class="projetos-card">
+          <img src="img/1.jpg" alt="Design Gráfico" class="projetos-imagem">
+          <h3>Design Gráfico</h3>
+          <p>Criações visuais, identidade visual e materiais gráficos profissionais.</p>
+        </div>
+      </a>
+
+      <!-- CARD WEB DESIGN -->
+      <a href="web-design.html" class="card-link" target="_blank">
+        <div class="projetos-card">
+          <img src="img/2.jpg" alt="Web Design" class="projetos-imagem">
+          <h3>Web Design</h3>
+          <p>Sites responsivos, landing pages e interfaces com foco em UX/UI.</p>
+        </div>
+      </a>
+
+      <!-- CARD AUDIOVISUAL -->
+      <a href="audiovisual.html" class="card-link" target="_blank">
+        <div class="projetos-card">
+          <img src="img/3.jpg" alt="Audiovisual e Fotografia" class="projetos-imagem">
+          <h3>Audiovisual e Fotografia</h3>
+          <p>Vídeos, fotos e produções audiovisuais profissionais.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contatos">
+    <h3 class="contatos-titulo">Entre em Contato</h3>
+    <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+      <div class="grupo-form">
+        <input type="text" id="nome" placeholder="Nome" class="campo-form">
+      </div>
+      <div class="grupo-form">
+        <textarea id="mensagem" class="campo-form" placeholder="Digite sua Mensagem" rows="6"></textarea>
+      </div>
+      <button type="submit" class="botao-form">Enviar mensagem via WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+     <p>Desenvolvido por <strong>Horrany Gomes</strong> | &copy; 2026</p>
+    <div>
+      <a href="https://www.linkedin.com/in/horranygomes" target="_blank">
+        <img src="img/linkedin-vector.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/byhorrany?igsh=N3JsZHhrcmhrN2Vw&utm_source=qr" target="_blank">
+        <img src="img/instagram-vector.png"Instagram">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function enviarWhats(event){
+      event.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const mensagem = document.getElementById('mensagem').value;
+      const telefone = '551696423345';
+      const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+      const msgFormatada = encodeURIComponent(texto);
+      const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
