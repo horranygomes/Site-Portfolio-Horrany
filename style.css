@@ -51,11 +51,33 @@ body {
   padding:1.5rem;
 }
 
-.menu{
-  display: flex;
-  justify-content: center;
+.menu {
+  display: flex;           /* coloca os itens na mesma linha */
+  flex-direction: row;     /* força horizontal */
+  justify-content: center; /* centraliza */
+  gap: 2rem;               /* espaço entre os itens */
   list-style: none;
-  gap: 3rem;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;       /* evita quebrar para outra linha */
+}
+
+  /* opcional: garante que os li fiquem inline */
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 15px;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: row !important;  /* força horizontal */
+    flex-wrap: nowrap !important;    /* não quebra linha */
+    gap: 1rem;                       /* reduz espaço se precisar */
+  }
 }
 
 .menu-link{
