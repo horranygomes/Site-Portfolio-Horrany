@@ -366,23 +366,26 @@ h1{
   transform: scale(1.2);
 }
 
-/* Ícones do rodapé */
-.rodape img{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+/* Container dos ícones */
+.rodape-icone{
+  display: flex;
+  justify-content: center; /* centraliza */
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
-.rodape img {
-  width: 50px; /* aumenta tamanho */
+/* Ícones */
+.rodape-icone img {
+  width: 50px;
   height: 50px;
+  object-fit: contain;
   border-radius: 50%;
-  margin: 0 10px;
   transition: all 0.3s ease;
   filter: drop-shadow(0 0 10px var(--primaria));
 }
 
-.rodape img:hover {
+/* Hover */
+.rodape-icone img:hover {
   transform: scale(1.2) rotate(-10deg);
   filter: drop-shadow(0 0 20px var(--secundaria));
 }
